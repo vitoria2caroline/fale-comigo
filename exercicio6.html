@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.*/
+         let resposta= "sim"
+         let cont=0
+            do {
+                let n1= parseInt(prompt("digite um número"))
+                let n2= parseInt(prompt("digite um número"))
+                let media= (n1+n2)/2
+                document.write("a media das notas é" + media)
+                if (media>=9.5){
+                    document.write("você esta aprovado <br/>")
+                    cont++
+                } else { /* nomeclatura americana é . */
+                    document.write("você está reprovado <br/>")
+                } resposta= prompt("calcular a média de outro aluno sim/não?")
+} while(resposta==="sim")
+document.write("o número de pessoas aprovadas é " +cont)
+    </script>
+</body>
+</html>

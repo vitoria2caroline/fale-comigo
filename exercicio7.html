@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio7</title>
+</head>
+<body>
+    <script>
+       /* 7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário.*/ 
+        let cont = 1
+        let contd= 0
+        let soma = 0
+        while(cont<=6){
+        let n= parseInt(prompt("digite uma nota valida"))
+        cont++
+        if(n>= 0 && n<=10){
+            soma +=n 
+            contd++
+       }else {
+        while(n<0 || n>10){
+            n= parseInt(prompt("digite uma nota "))
+        } soma +=n 
+          contd++
+       }
+       }
+       let media = soma/contd
+       document.write("a media das notas é"+ media)
+    </script>
+</body>
+</html>

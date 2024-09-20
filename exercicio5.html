@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.*/
+        let n1= parseInt(prompt("Digite um número"))
+        let n2= parseInt(prompt("Digite um número"))
+        let soma=0
+        let contador = 0
+
+        if(n1 < n2){
+            for(let i = n1; i <= n2; i++){
+                soma+=i
+                contador++
+            }
+        } else {
+            while(n1 > n2){
+                n2= parseInt(prompt("Digite o segundo número"))
+            }
+            for(let i = n1; i <= n2; i++){
+                soma += i;
+                contador++;
+           }
+        }
+        let media = soma / contador
+
+        document.write(`a média entre esses números é de:${media}`)
+
+    </script>
+</body>
+</html>
